@@ -27,11 +27,9 @@ None.
 ```
 - hosts: servers
   roles:
-    - {
-      role: m31271n.docker,
+    - role: m31271n.docker
       docker_version: 17.03.1.ce
       docker_users: [ 'deploy' ]
-    }
 ```
 
 ## License
