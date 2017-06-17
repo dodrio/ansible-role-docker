@@ -1,6 +1,6 @@
 # Ansible Role: Docker
 
-An ansible role that installs docker on CentOS 7.
+An ansible role that installs docker on EL 7.
 
 ## Requirements
 
