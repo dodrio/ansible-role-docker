@@ -1,0 +1,34 @@
+---
+- name: add official Docker CE Stable repository
+  yum_repository:
+    name: docker-ce-stable
+    description: Docker CE Stable
+    baseurl: https://download.docker.com/linux/centos/7/$basearch/stable
+    gpgkey: https://download.docker.com/linux/centos/gpg
+    gpgcheck: yes
+    enabled: yes
+
+- name: ensure docker is installed
+  yum:
+    name: docker-ce-{{ docker_version }}
+    state: present
+
+- name: ensure 'docker' group present
+  group:
+    name: docker
+    state: present
+    system: yes
+
+- name: add users into 'docker' group
+  user:
+    append: yes
+    groups: docker
+    state: present
+    name: '{{ item }}'
+  with_items: '{{ docker_users }}'
+
+- name: ensure docker is running and enabled
+  service:
+    name: docker
+    state: started
+    enabled: yes
