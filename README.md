@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/m31271n/ansible-role-docker.svg?branch=master)](https://travis-ci.org/m31271n/ansible-role-docker)
 [![Ansible Galaxy](https://img.shields.io/badge/galaxy-m31271n.docker-blue.svg)](https://galaxy.ansible.com/m31271n/docker/)
 
-An ansible role that installs docker on EL.
+Ansible role that installs docker on EL.
 
 ## Supported EL versions
 

@@ -1,6 +1,6 @@
 galaxy_info:
   author: m31271n
-  description: An ansible role that installs docker on EL.
+  description: Ansible role that installs docker on EL.
   license: MIT
   min_ansible_version: 2.0
   platforms:
