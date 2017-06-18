@@ -32,6 +32,6 @@ None.
       docker_users: [ 'deploy' ]
 ```
 
-## License
+* * *
 
-MIT
+<p align="center">Made with ❤ by <a href="http://index.m31271n.com">m31271n</a></p>
