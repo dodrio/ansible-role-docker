@@ -18,6 +18,11 @@ None.
 + `docker_version`: `17.03.1.ce`
 + `docker_users`: `[]`
 + `docker_storage_driver`: `overlay`
++ `docker_http_proxy`: ` `
++ `docker_https_proxy`: ` `
++ `docker_no_proxy`: ` `
+
+Read [here](https://docs.docker.com/engine/admin/systemd/) for HTTP/HTTPS proxy settings.
 
 ## Dependencies
 
