@@ -15,8 +15,9 @@ None.
 
 ## Role Variables
 
-+ `docker_version` - version to install
-+ `docker_users` - users added to `docker` group
++ `docker_version`: `17.03.1.ce`
++ `docker_users`: `[]`
++ `docker_storage_driver`: `overlay`
 
 ## Dependencies
 

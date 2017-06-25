@@ -13,6 +13,25 @@
     name: docker-ce-{{ docker_version }}
     state: present
 
+- name: setup docker storage driver - create directory
+  file:
+    path: /etc/systemd/system/docker.service.d/
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: setup docker storage driver - create configuration
+  template:
+    src: storage-driver.conf.j2
+    dest: /etc/systemd/system/docker.service.d/storage-driver.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - reload systemd
+    - restart docker
+
 - name: ensure 'docker' group present
   group:
     name: docker
