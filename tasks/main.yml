@@ -13,6 +13,11 @@
     name: docker-ce-{{ docker_version }}
     state: present
 
+- name: ensure python-docker-py is installed
+  yum:
+    name: python-docker-py
+    state: latest
+
 - name: setup docker storage driver - create directory
   file:
     path: /etc/systemd/system/docker.service.d/
