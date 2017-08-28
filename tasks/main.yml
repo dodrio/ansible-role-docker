@@ -18,6 +18,12 @@
     name: python-docker-py
     state: latest
 
+- name: ensure spotify/docker-gc is croned
+  cron:
+    name: 'spotify/docker-gc'
+    special_time: hourly
+    job: 'docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc:ro spotify/docker-gc'
+
 - name: setup docker storage driver - create directory
   file:
     path: /etc/systemd/system/docker.service.d/
