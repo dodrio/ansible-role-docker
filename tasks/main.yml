@@ -21,7 +21,9 @@
 - name: ensure spotify/docker-gc is croned
   cron:
     name: 'spotify/docker-gc'
-    special_time: hourly
+    weekday: 1
+    hour: 2
+    minute: 0
     job: 'docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc:ro spotify/docker-gc'
 
 - name: setup docker storage driver - create directory
